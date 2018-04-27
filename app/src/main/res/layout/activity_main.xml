@@ -17,14 +17,23 @@
             android:layout_weight="1"
             android:scaleType="centerCrop"
             android:id="@+id/iv_original_image"/>
+        <View
+            android:layout_width="2dp"
+            android:background="@android:color/black"
+            android:layout_height="match_parent"></View>
         <ImageView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:id="@+id/iv_modified_image"/>
-
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/imae_seprate"
+        android:layout_below="@+id/ll_imageview"
+        android:background="@android:color/black"
+        android:layout_height="2dp"/>
 
     <Button
         android:id="@+id/btn_normal_quality"
@@ -32,7 +41,7 @@
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:text="@string/capture"
-        android:layout_below="@+id/ll_imageview" />
+        android:layout_below="@+id/imae_seprate" />
 
     <LinearLayout
         android:id="@+id/ll_modification_field"

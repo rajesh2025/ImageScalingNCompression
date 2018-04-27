@@ -60,7 +60,7 @@ public class FullScreenImageActivity extends AppCompatActivity {
 
             String image_details = " Height: "+myBitmap.getHeight()+
                     " Width: "+myBitmap.getWidth()+
-                    "  Size in kb: "+  Utility.getFileSize(imgFile.length());
+                    "  Size : "+  Utility.getFileSize(imgFile.length());
 
         Log.i("im memory size",myBitmap.getByteCount()+"");
         Log.i("im disk size",size+"");
