@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:id="@+id/ll_imageview">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_original_image"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_modified_image"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_normal_quality"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="@string/capture"
+        android:layout_below="@+id/ll_imageview" />
+
+    <LinearLayout
+        android:id="@+id/ll_modification_field"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_below="@id/btn_normal_quality"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="compress quality( 10-100)"
+            android:id="@+id/et_compression_quality"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="image height"
+            android:id="@+id/et_image_height"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="image width"
+            android:id="@+id/et_image_width"/>
+    </LinearLayout>
+
+
+<Button
+    android:layout_width="match_parent"
+    android:text="load image"
+    android:visibility="gone"
+    android:layout_below="@+id/ll_modification_field"
+    android:id="@+id/btn_image_load"
+    android:layout_height="wrap_content" />
+</RelativeLayout>
